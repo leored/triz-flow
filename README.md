@@ -1,13 +1,53 @@
-# TRIZ — Referencia Completa del Método
+# TRIZ Flow
 
 > **Teoría para Resolver Problemas de Inventiva**
 > Genrich Altshuller, 1946–1998
 
-Documentación de referencia completa sobre el método TRIZ en español. Cubre todas las herramientas principales: desde los fundamentos hasta ARIZ-85C.
+Referencia completa del método TRIZ en español + sistema de dinámicas interactivas para analizar problemas técnicos con Claude Code.
+
+Un facilitador orquesta el análisis aplicando distintas "lentes TRIZ" en rondas secuenciales. Expertos de distintos dominios aportan perspectivas diversas — alineado con el principio TRIZ de que las mejores soluciones vienen de otros campos.
+
+## Inicio rápido
+
+```bash
+# 1. Crear un reto
+/new-challenge reducir-friccion-en-rodamientos
+
+# 2. Editar challenges/reducir-friccion-en-rodamientos/00-challenge.md
+#    con la descripción del problema técnico
+
+# 3. Crear expertos de distintos dominios
+/create-expert bióloga marina con 20 años en biomimética
+/create-expert ingeniero aeronáutico especialista en tribología
+
+# 4. Ejecutar la sesión — el facilitador elige las lentes TRIZ apropiadas
+/run-session reducir-friccion-en-rodamientos
+```
+
+### Lentes TRIZ disponibles
+
+| Agente | Lente | Qué hace |
+|--------|-------|----------|
+| `@analista` | Análisis de sistemas | Descompone componentes, funciones, contradicciones y recursos |
+| `@principios` | 40 Principios + Matriz | Consulta la Matriz de Contradicciones y genera ideas concretas |
+| `@su-campo` | Sustancia-Campo | Modela interacciones S1-S2-F y aplica las 76 soluciones estándar |
+| `@evolucion` | Leyes de evolución | Evalúa estado evolutivo y predice dirección de desarrollo |
+| `@idealidad` | RFI e Idealidad | Empuja soluciones hacia la máxima idealidad explotando recursos |
+| `@facilitador` | Orquestador | Elige la secuencia de lentes y sintetiza resultados |
+
+### Secuencias según tipo de problema
+
+| Tipo de problema | Secuencia |
+|-----------------|-----------|
+| Contradicción técnica clara | Analista → Principios → Idealidad |
+| Contradicción física | Analista → Principios (separación) → Idealidad |
+| Problema de interacción | Analista → Su-Campo → Idealidad |
+| Exploración completa | Analista → Principios → Su-Campo → Evolución → Idealidad |
+| Predicción tecnológica | Analista → Evolución → Idealidad |
 
 ---
 
-## Mapa de navegación
+## Referencia del método TRIZ
 
 ### 00 · Fundamentos
 
@@ -103,5 +143,5 @@ Documentación de referencia completa sobre el método TRIZ en español. Cubre t
 
 ---
 
-> Esta documentación es una referencia de consulta sobre el método TRIZ clásico de Altshuller.
-> Contenido en español. Enlaces internos compatibles con GitHub y Obsidian.
+> Referencia del método TRIZ clásico de Altshuller + dinámicas interactivas con Claude Code.
+> Contenido en español. Compatible con GitHub y Obsidian.
